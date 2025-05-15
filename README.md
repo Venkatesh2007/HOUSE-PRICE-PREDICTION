@@ -1,21 +1,106 @@
-# House Price Prediction
+# House Price Prediction Using Linear Regression (From Scratch)
 
-The "House Price Prediction" project focuses on predicting housing prices using machine learning techniques. By leveraging popular Python libraries such as NumPy, Pandas, Scikit-learn (sklearn), Matplotlib, Seaborn, and XGBoost, this project provides an end-to-end solution for accurate price estimation.
+This repository contains a simple implementation of **Linear Regression** from scratch in Python, applied to the problem of predicting house prices based on various features.
+
+---
 
 ## Project Overview
 
-The "House Price Prediction" project aims to develop a model that can accurately predict housing prices based on various features. This prediction task is of great significance in real estate and finance, enabling informed decision-making for buyers, sellers, and investors. By employing machine learning algorithms and a curated dataset, this project provides a powerful tool for estimating house prices.
+The goal of this project is to build a Linear Regression model without using any machine learning libraries (like scikit-learn) and apply it on a real-world dataset for house price prediction. The model is trained using **gradient descent** and evaluated using common regression metrics.
 
-## Key Features
+---
 
-- **Data Collection and Processing:** The project utilizes the "California Housing" dataset, which can be directly downloaded from the Scikit-learn library. The dataset contains features such as house age, number of rooms, population, and median income. Using Pandas, the data is processed and transformed to ensure it is suitable for analysis.
+## Features
 
-- **Data Visualization:** The project employs data visualization techniques to gain insights into the dataset. Matplotlib and Seaborn are utilized to create visualizations such as histograms, scatter plots, and correlation matrices. These visualizations provide a deeper understanding of the relationships between features and help identify trends and patterns.
+- Custom implementation of Linear Regression
+- Feature scaling (standardization) applied to input features
+- Training using gradient descent optimization
+- Visualization of loss reduction over training epochs
+- Visualization of predictions vs actual house prices
+- Evaluation using Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared score
 
-- **Train-Test Split:** To evaluate the performance of the regression model, the project employs the train-test split technique. The dataset is split into training and testing subsets, ensuring that the model is trained on a portion of the data and evaluated on unseen data. This allows for an accurate assessment of the model's predictive capabilities.
+---
 
-- **Regression Model using XGBoost:** The project utilizes the XGBoost algorithm, a popular gradient boosting framework, to build the regression model. XGBoost is known for its ability to handle complex relationships between features and achieve high predictive accuracy. The Scikit-learn library provides an implementation of XGBoost that is utilized in this project.
+## Dataset
 
-- **Model Evaluation:** The project assesses the performance of the regression model using evaluation metrics such as R-squared error and mean absolute error. R-squared error measures the proportion of the variance in the target variable that can be explained by the model, while mean absolute error quantifies the average difference between the predicted and actual house prices. These metrics provide insights into the model's accuracy and precision. Additionally, a scatter plot is created to visualize the predicted prices against the actual prices.
+The dataset used (`house_data.csv`) contains various house-related features such as number of bedrooms, bathrooms, square footage, year built, etc., along with the house prices.
 
+**Note:** The dataset should be placed in the root directory or update the path accordingly in the notebook/script.
 
+---
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/house-price-prediction.git
+   cd house-price-prediction
+````
+
+2. Install dependencies:
+
+   ```bash
+   pip install numpy pandas matplotlib scikit-learn
+   ```
+
+3. Run the script or notebook:
+
+   ```bash
+   python house_price_regression.py
+   ```
+
+   or open the Jupyter notebook and run all cells.
+
+---
+
+## Code Structure
+
+* `LinearRegression` class: Custom implementation of Linear Regression with methods:
+
+  * `fit(X, y)`: Train the model using gradient descent
+  * `predict(X)`: Predict house prices for given features
+  * `plot_loss()`: Plot training loss over epochs
+  * `plot_predictions(X, y, preds)`: Plot predicted vs actual prices
+
+* `standardize(X)`: Function to standardize features for better convergence
+
+* Data loading, preprocessing, training, prediction, and evaluation steps included
+
+---
+
+## Results
+
+Example output metrics from the model:
+
+* Mean Absolute Error (MAE): *e.g., 210759.14640801313*
+* Mean Squared Error (MSE): *e.g., 986608166705.6411*
+* Root Mean Squared Error (RMSE): *e.g., 993281.5143279579*
+* R-squared Score: *e.g., 0.03259135428037074*
+
+Loss and prediction plots are generated to visualize training performance and accuracy.
+
+---
+
+## Future Improvements
+
+* Add polynomial or interaction features to capture non-linear relationships
+* Implement regularization (Ridge, Lasso) to prevent overfitting
+* Explore other models like Decision Trees, Random Forests, or Gradient Boosting
+* Perform hyperparameter tuning (learning rate, number of iterations)
+* Better feature engineering and selection
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+Badam Venkatesh
+Email: [badamvenkatesh2007@gmail.com](mailto:badamvenkatesh2007@gmail.com)
+GitHub: [Venkatesh2007](https://github.com/Venkatesh2007)
+
+---
