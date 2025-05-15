@@ -33,7 +33,7 @@ The dataset used (`house_data.csv`) contains various house-related features such
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/house-price-prediction.git
+   git clone https://github.com/Venkatesh2007/house-price-prediction.git
    cd house-price-prediction
 
 2. Install dependencies:
@@ -45,7 +45,7 @@ The dataset used (`house_data.csv`) contains various house-related features such
 3. Run the script or notebook:
 
    ```bash
-   python house_price_regression.py
+   python house_price_prediction.py
    ```
 
    or open the Jupyter notebook and run all cells.
