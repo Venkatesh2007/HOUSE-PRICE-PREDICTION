@@ -35,7 +35,6 @@ The dataset used (`house_data.csv`) contains various house-related features such
    ```bash
    git clone https://github.com/yourusername/house-price-prediction.git
    cd house-price-prediction
-````
 
 2. Install dependencies:
 
